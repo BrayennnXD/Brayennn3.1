@@ -22,7 +22,7 @@ pip install rich
 
 pip install mechanize
 
-git clone https://github.com/BrayennnXD/Brayennn3.1
+git clone https://github.com/CLAOUPY/Brayennn3.1
 
 cd Brayennn3.1
 
