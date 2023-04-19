@@ -1,8 +1,8 @@
 # Brayennn3.1
 
 Kalau Ijo Syukur Kalau Cepe Oprek Sendiri Aja
-Ini SC Free Jangan Berharap Lebih ya🗿🗿🗿
-Sekalian Info THR🗿🗿
+Ini SC Free Jangan Berharap Lebih ya
+Sekalian Info THR 🗿
 
 pkg update && pkg upgrade
 
