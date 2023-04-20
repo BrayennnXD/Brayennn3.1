@@ -68,13 +68,9 @@ for xd in range(10000):
 
 for t in range(10000):
 	rr = random.randint
-	samsung=random.choice(['SM-J415N','SM-J610G','SM-J610F','SM-A536E','SM-G531H'])
-	build=random.choice(['OPM1','TP1A','RP1A','PPR1','PKQ1','QP1A','SP1A','RKQ1'])
-	browser=random.choice(['HeyTapBrowser/10.8.12.2','HeyTapBrowser/45.9.3.1.1','HeyTapBrowser/40.8.12.2','HeyTapBrowser/10.7.10.0.2','HeyTapBrowser/10.8.9.1','HeyTapBrowser/26.7.36.1','HeyTapBrowser/12.7.36.1','HeyTapBrowser/8.7.36.1','HeyTapBrowser/30.7.36.1','HeyTapBrowser/18.7.36.1','HeyTapBrowser/23.7.36.1'])
-	brayen1=f'Mozilla/5.0 (Linux; Android {str(rr(6,14))}; {samsung} Build/{build}.{str(rr(111111,210000))}.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(73,150))}.0.{str(rr(5500,5900))}.{str(rr(75,150))} Mobile Safari/537.36 '
-	brayen2=f'Mozilla/5.0 (Linux; Android {str(rr(6,14))}; {samsung} Build/{build}.{str(rr(111111,210000))}.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(73,150))}.0.{str(rr(5500,5900))}.{str(rr(75,150))} Mobile Safari/537.36 {browser}'
-	brayen3=f'Mozilla/5.0 (Linux; Android {str(rr(6,14))}; {samsung}) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(73,150))}.0.{str(rr(5500,5900))}.{str(rr(75,150))} Mobile Safari/537.36'
-	uaku2 = random.choice([brayen1,brayen2,brayen3])
+	brayen1=f'Mozilla/5.0 (Linux; Android {str(rr(111111,199999))}; 4188S Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) {str(rr(73,99))}.0.{str(rr(4500,4900))}.{str(rr(75,150))} Version/4.0 Chrome/ {str(rr(2111111,2999999))} Mobile Safari/537.36"'
+	brayen2=f'Mozilla/5.0 (Linux; Android {str(rr(211111,299999))}; CPH2457) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ {str(rr(73,99))}.0.{str(rr(4500,4900))}.{str(rr(75,150))} Mobile Safari/537.36"'
+	uaku2 = random.choice([brayen1,brayen2])
 	ugen.append(uaku2)
 	
 for x in range(10):
