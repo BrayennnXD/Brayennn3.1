@@ -181,7 +181,7 @@ def login():
 		except KeyError:
 			login123()
 		except requests.exceptions.ConnectionError:
-			li = ' [+] Problem Internet Connection, Check And Try Again'
+			li = ' [+] Awokawok Ngak Bisa Di Pake Ya Sc Nya 😁'
 			lo = mark(li, style='red')
 			sol().print(lo, style='cyan')
 			exit()
